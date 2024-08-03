@@ -1,0 +1,152 @@
+.cart-screen{  
+    width:100% ; 
+    height:92vh ;
+    display: flex;
+    flex-direction: row;
+}
+.cart-left{ 
+ flex:.4 ; 
+ width:100% ; 
+ 
+ background-color: #1e3932;
+ display: flex; 
+ flex-direction: column;
+ align-items: center;
+ justify-content: center;
+ color:white;  
+ text-align: left;
+}
+.cart-left h4{ 
+    color:#ffffffb3; 
+}
+.store-add{ 
+    height:50px ;  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    border-bottom: 1px solid white ; 
+    cursor: pointer;
+}
+.cart-right{ 
+    flex:.6 ; 
+    flex-direction: column;
+    width:100% ; 
+    display: flex;
+    overflow-y: scroll; 
+    align-items: center;
+
+}
+.card-row { 
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: space-between;
+    max-height: 20px;
+}
+
+.card-row p{
+        font-weight: bold;
+}
+
+.checkout-btn{ 
+    position: fixed; 
+    bottom:0 ; 
+    right:0 ;   
+    margin: 30px; 
+    padding:15px 25px ;  
+    border:none ; 
+    border-radius: 20px;
+    background-color: #00754a;
+    color:white ; 
+    font-weight: bold;
+    cursor: pointer;
+} 
+.cart-total{ 
+    width:500px ; min-height:200px ; 
+    box-shadow: 0px 0px 10px rgb(0, 0, 0 , .1) ;
+    border-radius: 10px  ;
+    padding:10px ; 
+    margin:10px ; 
+    display:flex; 
+    align-items: center; 
+    justify-content: center;
+    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .cart-screen {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .cart-left, .cart-right {
+    flex: 1;
+    width: 100%;
+  }
+
+  .cart-left {
+    padding: 10px;
+    text-align: center;
+  }
+
+  .store-add {
+    height: 40px;
+    font-size: 14px;
+  }
+
+  .cart-right {
+    overflow-y: visible;
+    padding: 10px;
+  }
+
+  .card-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cart-total {
+    width: 90%;
+    min-height: 150px;
+    margin: 10px auto;
+  }
+
+  .checkout-btn {
+    position: static;
+    margin: 10px auto;
+    width: 90%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .cart-left {
+    padding: 5px;
+  }
+
+  .store-add {
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .cart-right {
+    padding: 5px;
+  }
+
+  .card-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cart-total {
+    width: 100%;
+    min-height: 120px;
+    padding: 5px;
+  }
+
+  .checkout-btn {
+    margin: 10px auto;
+    width: 100%;
+    padding: 10px 20px;
+  }
+}

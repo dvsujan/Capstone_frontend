@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+MX:wght@100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url(https://db.onlinewebfonts.com/c/d7e8a95865396cddca89b00080d2cba6?family=SoDo+Sans+SemiBold);
+
+.landing-page{ 
+    width:100% ; 
+    height:auto ;
+    padding:0px ; 
+    margin:0px ; 
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif; 
+}
+.sec1{ 
+    width:100%; 
+    height:80vh ;  
+    background-color: #dfece5;
+    display: flex; 
+}
+
+.sec1-left{ 
+    flex:.5 ; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color:#006241; 
+} 
+.sec1-left h1{ 
+    font-family: "SoDo Sans SemiBold";
+    font-size: 50px;
+    width:40%; 
+    text-align: center;
+}
+.sec1-left p{ 
+    font-family: "SoDo Sans SemiBold";
+    width:50%; 
+    font-size: 24px;
+    text-align: center;
+}
+.sec1-left button{ 
+    padding:10px 20px; 
+    border:none ; 
+    border-radius: 50px ;
+    background-color: #006241;
+    color:#dfece5; 
+
+}
+.sec1-right{ 
+    flex:.5 ; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+.sec1-right img{ 
+    width:80% ; 
+}
+
+.sec1-left a { 
+    text-decoration: none ;
+    color:white; 
+}
+
+.sec2{ 
+    width: 100%;
+    height: 60vh;
+    background-color: #1E3932;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.sec2 h1{ 
+    color:white; 
+    font-size: 24px;
+    
+}
+.sec2 p{ 
+    color:white; 
+    font-size: 18px;
+}
+.sec3{ 
+    width:100% ; 
+    height: 50vh;
+    background-color: #040404;
+    display: flex; 
+    flex-direction: row;
+}
+
+.sec3 img{ 
+}
+.sec3 h1{
+
+    color:white; 
+    font-size: 24px;
+
+}
+.sec3 p{ 
+
+    color:white; 
+    font-size: 16px;
+}
+@media (max-width: 767px) {
+    .sec1 {
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .sec1-left {
+        flex: 1;
+        padding: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sec1-left h1 {
+        font-size: 36px;
+        width: 80%;
+    }
+    
+    .sec1-left p {
+        font-size: 18px;
+        width: 90%;
+    }
+
+    .sec1-right {
+        flex: 1;
+        padding: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .sec1-right img {
+        width: 100%;
+        height: auto;
+    }
+
+    .sec2 {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .sec2 h1 {
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    .sec2 p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .sec3 {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .sec3 h1 {
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    .sec3 p {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .sec3 img {
+        width: 100%;
+        height: auto;
+    }
+}
+

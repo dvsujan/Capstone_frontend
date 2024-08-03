@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+MX:wght@100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+.store-card{  
+    font-family: "Roboto", sans-serif;  
+    width:93% ; 
+    height:150px ; 
+    margin:5px; 
+    border-bottom:1px solid green ;  
+    padding:10px ; 
+}
+
+.store-card h2{  
+    font-size: 18px;
+}
+.store-card p{  
+    padding:5px; 
+}
+.store-card span{ 
+    display: flex;
+    flex-direction: row;
+}
+.store-card button {
+    padding:10px 20px ;  
+    border:none ; 
+    border-radius: 20px; 
+    background-color: #00764b;
+    color:white ; 
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .store-card {
+    width: 100%;
+    height: auto;
+    padding: 10px 5px;
+  }
+
+  .store-card h2 {
+    font-size: 16px;
+  }
+
+  .store-card p {
+    padding: 3px;
+  }
+
+  .store-card span {
+    flex-direction: column;
+  }
+
+  .store-card button {
+    padding: 8px 15px;
+    width: 90%;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .store-card {
+    height: auto;
+    padding: 10px 5px;
+  }
+
+  .store-card h2 {
+    font-size: 14px;
+  }
+
+  .store-card p {
+    padding: 2px;
+    font-size: 12px;
+  }
+
+  .store-card button {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+}

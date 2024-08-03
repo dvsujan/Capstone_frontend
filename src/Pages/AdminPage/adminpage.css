@@ -1,0 +1,24 @@
+.product-form{  
+    display: flex; 
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    height:500px ; 
+}
+
+.product-form input,.product-form select,.product-form button{ 
+    width:80%; 
+    height:30px;  
+    border:none ; 
+    border-bottom: .2px solid #CCC;
+}
+.product-form button{
+    background-color: #00754a ;
+    color:white; 
+    font-weight: bold;
+    border-radius: 5px;  
+}
+.product-form input:focus{ 
+    border:0px ; 
+    border-bottom:.5px solid #ccc; 
+}

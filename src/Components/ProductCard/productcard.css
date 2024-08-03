@@ -1,0 +1,20 @@
+.product-card{ 
+    width:200px ; 
+    height: 225px ;
+    margin:20px ; 
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.product-card img{ 
+    width:150px ; 
+    height:150px ; 
+    border-radius: 50%;
+}
+.product-card h4{ 
+    font-size: 20px;
+    text-align: center;
+}
