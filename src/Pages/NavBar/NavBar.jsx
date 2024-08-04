@@ -3,9 +3,11 @@ import './navbar.css'
 import Logo from '../../Assets/Logo.svg'
 import { parseJwt } from '../../global/Global';
 import { NavLink } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const NavBar = () => {
   const [loggedIn, setLoggedIn] = useState(false);  
+  const navigate = useNavigate(); 
   useEffect(()=>{ 
     if (localStorage.getItem("token") !== null) {
       const token = localStorage.getItem("token");
@@ -19,10 +21,10 @@ const NavBar = () => {
     }
     else{
       setLoggedIn(false); 
-      const path = (window.location.href.split('/'))[3]; 
+      const path = (window.location.href.split('/'))[3].split("?")[0]; 
       const exceptPaths = ['login','register','employee', 'menu','admin',''];
       if(!exceptPaths.includes(path)){
-        window.location.href = '/login';
+        window.location.href = ( `/login?history=${window.location.pathname}`); 
       }
     }
   },[]) 

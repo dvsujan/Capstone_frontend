@@ -2,8 +2,16 @@ import React, {useRef , useEffect , useState}from "react";
 import "./login.css";
 import toast , {Toaster} from "react-hot-toast";
 import axios from "axios";
+import { useAuth } from "../../Auth/AuthProvider";
+import { useNavigate, useSearchParams } from 'react-router-dom';
 
 const Login = () => {  
+
+   const navigate = useNavigate();
+  const { login, redirectPath } = useAuth();
+  const [searchParams, setSearchParams] = useSearchParams();
+
+ 
   const usernameRef = useRef();
   const passwordRef = useRef();
   const isValidEmail = (email)=>{  
@@ -25,7 +33,7 @@ const Login = () => {
       if(response.status === 200){
         toast.success("Login successful");
         localStorage.setItem("token", response.data.token);
-        window.location.href = "/menu";
+        window.location.href = searchParams.get("history") || "/menu";
       }else{
         toast.error(response.message);
       }

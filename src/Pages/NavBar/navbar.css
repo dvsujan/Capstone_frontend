@@ -13,9 +13,9 @@ nav {
 }
 
 .left img { 
-    width: 60px; 
-    height: 60px; 
-    padding: 20px;
+    height: 5vh; 
+    width:auto ; 
+    padding-left: 20px;
 }
 
 .right { 
