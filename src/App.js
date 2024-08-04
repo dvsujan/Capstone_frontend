@@ -14,7 +14,7 @@ import StorePage from "./Pages/StorePage/StorePage";
 import AdminPage from "./Pages/AdminPage/AdminPage";
 import AdminLogin from "./Pages/AdminLogin/AdminLogin";
 import { AuthProvider } from "./Auth/AuthProvider";
-import ProtectedRoute from "./Auth/ProtectedRoute";
+import NotFoundPage from "./Pages/404/NotFoundPage";
 
 function App() {
   return (
@@ -39,7 +39,7 @@ function App() {
           <Route path="/employee/store" element={<StorePage />} />
           <Route path="/admin" element={<AdminPage />} />
           <Route path="/admin/login" element={<AdminLogin />} />
-          <Route path="*" element={<div>404 Not Found</div>} />
+          <Route path="*" element={<NotFoundPage/>} />
         </Routes>
       </Router>
     </AuthProvider>

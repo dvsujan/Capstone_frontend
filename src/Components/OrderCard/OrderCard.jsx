@@ -4,6 +4,7 @@ import "./ordercard.css";
 import LoadingAnimation from "../../Assets/loading.json";
 import DoneAnimation from "../../Assets/tickanimation.json";
 import PreparingAnimation from "../../Assets/Preparing.json";
+import DeclineAnimation from "../../Assets/Decline.json";
 
 const AccordionItem = ({ product, isOpen, onClick }) => (
   <div className="accordion-item">
@@ -90,6 +91,7 @@ const OrderCard = (props) => {
         {status==="Pending"&&<Lottie animationData={LoadingAnimation} loop={true} style={{width:'150px', height:'150px'}} />}
         {status==="Accepted"&&<Lottie animationData={PreparingAnimation} loop={true} style={{width:'150px', height:'150px'}} />}
         {status==="Ready"&&<Lottie animationData={DoneAnimation} loop={false}style={{width:'150px', height:'150px'}} />} 
+        {status==="Declined"&&<Lottie animationData={DeclineAnimation} loop={false}style={{width:'150px', height:'150px'}} />} 
       </div>
         }
     </div>

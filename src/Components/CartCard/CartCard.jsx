@@ -35,7 +35,7 @@ const CartCard = (props) => {
             <div className="cart-card-info">
                 <div className="card-row">
                     <h3>{cartItem.name}</h3>
-                    <p>₹{cartItem.cost}</p>
+                    <p className='cart-price'>₹{cartItem.cost}</p>
                 </div>
                 <p><strong>Quantity: </strong>{cartItem.quantity}</p>
                 <ul>

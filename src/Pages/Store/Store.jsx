@@ -5,7 +5,7 @@ import StoreComponent from '../../Components/StoreComponent/StoreComponent';
 import toast , { Toaster } from 'react-hot-toast';
 
 const Store = () => { 
-    const [userCity , setUserCity] = useState("India");    
+    const [userCity , setUserCity] = useState("Hyderabad");    
     const [storesData , setStoresData] = useState([]);
     useEffect(()=>{ 
         axios.get("http://ip-api.com/json/"). then((res)=>{

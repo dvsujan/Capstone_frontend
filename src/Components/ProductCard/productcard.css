@@ -18,3 +18,27 @@
     font-size: 20px;
     text-align: center;
 }
+
+@media (max-width: 767px) {
+    .product-card { 
+        width:80% ; 
+        height: auto;
+        margin: 10px 0; 
+        flex-direction: row;
+        padding: 10px;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .product-card img { 
+        width: 80px; 
+        height: 80px; 
+    }
+
+    .product-card h4 { 
+        flex:.7 ; 
+        font-size: 16px;
+        text-align: left;
+        margin-left: 10px;
+    }
+}
