@@ -2,11 +2,12 @@ import React, { useEffect, useState } from 'react'
 import './navbar.css'
 import Logo from '../../Assets/Logo.svg'
 import { parseJwt } from '../../global/Global';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useSearchParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
 
 const NavBar = () => {
   const [loggedIn, setLoggedIn] = useState(false);  
+  const [searchParams, setSearchParams] = useSearchParams()
   const navigate = useNavigate(); 
   useEffect(()=>{ 
     if (localStorage.getItem("token") !== null) {
@@ -26,7 +27,7 @@ const NavBar = () => {
       if(!exceptPaths.includes(path)){
         window.location.href = ( `/login?history=${window.location.pathname}`); 
       }
-    }
+    }  
   },[]) 
   const logoutUser = ()=>{ 
     localStorage.removeItem("token");

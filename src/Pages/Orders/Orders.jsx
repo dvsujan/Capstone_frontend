@@ -6,7 +6,8 @@ import OrderCard from "../../Components/OrderCard/OrderCard";
 import toast, { Toaster } from "react-hot-toast";
 
 const Orders = () => {
-  const [orders, setOrders] = useState([]);
+  const [orders, setOrders] = useState([]); 
+  const [userStore, setUserStore] = useState(null);
   const fetchOrders = async () => {
     const token = localStorage.getItem("token");
     const userId = parseJwt(token).UserId;
@@ -40,8 +41,12 @@ const Orders = () => {
 
   useEffect(() => {
     fetchOrders();
+    if (localStorage.getItem("storeData") != null) {
+      setUserStore(JSON.parse(localStorage.getItem("storeData")));
+    }
     const intervalId = setInterval(fetchOrders, 5000);
     return () => clearInterval(intervalId);
+    
   }, []);
   return (
     <div>
@@ -49,7 +54,19 @@ const Orders = () => {
       {orders && orders.length === 0 && <h3>No Orders</h3>}
       {orders &&
         orders?.toReversed().map((order) => <OrderCard order={order} />)}
-      <Toaster />
+      <Toaster /> 
+      <div className="product-bottom-bar">
+        <div className="store-data">
+          <h4 style={{color:"white" , padding:"10px"}}>Store </h4>
+          {userStore ? (
+            <a href="/store">{userStore.address}</a>
+          ) : (
+            <a href="/store">Select a store</a>
+          )}
+        </div>
+        <div className="product-borrom-right">
+        </div>
+      </div>
     </div>
   );
 };
