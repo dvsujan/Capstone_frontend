@@ -123,7 +123,7 @@ const Cart = () => {
           <div
             className="store-add"
             onClick={() => {
-              window.location.href = "/store";
+              window.location.href = `/store?history=${window.location.pathname}`;
             }}
           >
             {selectedStore ? <>{selectedStore.address}</> : <>Select Store</>}

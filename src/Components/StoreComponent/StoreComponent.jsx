@@ -1,13 +1,19 @@
 import React, { useEffect, useState } from 'react'
 import './storecomponent.css'
+import { useSearchParams } from 'react-router-dom';
 
 const StoreComponent = (props) => { 
-    const[storeData , setStoreData] = useState(props.storeData); 
+    const[storeData , setStoreData] = useState(props.storeData);  
+    const [searchParams, setSearchParams] = useSearchParams();
     useEffect(()=>{
         setStoreData(props.storeData); 
     } , [])
 const storestoreData = () => {
-    localStorage.setItem('storeData' , JSON.stringify(storeData));
+    localStorage.setItem('storeData' , JSON.stringify(storeData)); 
+    if (searchParams.get('history')  !== null) {
+        window.location.href = searchParams.get('history');
+        return ; 
+    }
     window.location.href = '/menu';
 }
   return (

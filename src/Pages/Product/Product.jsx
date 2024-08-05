@@ -115,9 +115,9 @@ const Product = () => {
       <div className="product-bottom-bar">
         <div className="store-data">
           {userStore ? (
-            <a href="/store">{userStore.address}</a>
+            <a href={`/store?history=${window.location.pathname}`}>{userStore.address}</a>
           ) : (
-            <a href="/store">Select a store</a>
+            <a href={`/store?history=${window.location.pathname}`}>Select a store</a>
           )}
         </div>
         <div className="product-borrom-right">

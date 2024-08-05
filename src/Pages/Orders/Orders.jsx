@@ -57,11 +57,11 @@ const Orders = () => {
       <Toaster /> 
       <div className="product-bottom-bar">
         <div className="store-data">
-          <h4 style={{color:"white" , padding:"10px"}}>Store </h4>
-          {userStore ? (
-            <a href="/store">{userStore.address}</a>
+          <h4 style={{color:"white" , padding:"10px"}}>Store </h4> 
+           {userStore ? (
+            <a href={`/store?history=${window.location.pathname}`}>{userStore.address}</a>
           ) : (
-            <a href="/store">Select a store</a>
+            <a href={`/store?history=${window.location.pathname}`}>Select a store</a>
           )}
         </div>
         <div className="product-borrom-right">
